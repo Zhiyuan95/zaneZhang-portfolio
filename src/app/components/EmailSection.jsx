@@ -7,7 +7,6 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -17,7 +16,6 @@ const EmailSection = () => {
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
-
     // Form the request for sending data to the server.
     const options = {
       // The method is POST because we are sending data.
@@ -29,16 +27,13 @@ const EmailSection = () => {
       // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
-
     const response = await fetch(endpoint, options);
     const resData = await response.json();
-
     if (response.status === 200) {
       console.log("Message sent.");
       setEmailSubmitted(true);
     }
   };
-
   return (
     <section
       id="contact"
