@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import { FaArrowDown } from "react-icons/fa";
 
 const AnimatedNumbers = dynamic(
   () => {
@@ -11,22 +12,24 @@ const AnimatedNumbers = dynamic(
 
 const achievementsList = [
   {
-    metric: "Projects",
+    metric: "tickets",
     value: "100",
     postfix: "+",
   },
   {
     prefix: "~",
-    metric: "Users",
-    value: "100,000",
+    metric: "Pull Request",
+    value: "150",
+    postfix: "+",
   },
   {
-    metric: "Awards",
-    value: "7",
+    metric: "Legacy Bugs",
+    value: 40,
+    postfix: "%↓",
   },
   {
     metric: "Years",
-    value: "5",
+    value: "2",
   },
 ];
 
