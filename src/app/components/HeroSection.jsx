@@ -45,6 +45,7 @@ const HeroSection = () => {
           <div>
             <Link
               href="/contact"
+              target="_blank"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-r from-orange-400 to-purple-700 hover:bg-slate-200 text-white"
             >
               Hire Me
