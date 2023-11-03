@@ -59,7 +59,8 @@ const projectsData = [
   {
     id: 5,
     title: "Personal Portfolio Next.js",
-    description: "Authentication and CRUD operations",
+    description:
+      "A responsive portfolio website using NextJs, Tailwind, and ReactAnimation",
     image: "/projectImgs/portfolio.png",
     tag: ["All", "Web"],
     gitUrl: "/",
