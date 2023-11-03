@@ -1,8 +1,19 @@
-import React from "react";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
+import React, { useState } from "react";
+import {
+  CodeBracketIcon,
+  EyeIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
     <div>
       <div
@@ -24,10 +35,30 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           </Link>
         </div>
       </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
+      <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+        <div className={`description ${isCollapsed ? "collapsed" : ""}`}>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
+        </div>
+        <button
+          onClick={toggleCollapse}
+          className="text-[#ADB7BE] mt-2 cursor-pointer flex items-center"
+        >
+          {isCollapsed ? (
+            <ChevronDownIcon className="h-5 w-5 mr-1" />
+          ) : (
+            <ChevronUpIcon className="h-5 w-5 mr-1" />
+          )}
+          {isCollapsed ? "Show more" : "Show less"}
+        </button>
       </div>
+
+      <style jsx>{`
+        .description.collapsed {
+          max-height: 2.5em; /* Adjust the height you prefer for the collapsed state */
+          overflow: hidden;
+        }
+      `}</style>
     </div>
   );
 };
