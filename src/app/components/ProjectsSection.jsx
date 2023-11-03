@@ -54,7 +54,7 @@ const projectsData = [
     image: "/projectImgs/serviceweb.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://iecl.com.au/",
   },
   {
     id: 5,
