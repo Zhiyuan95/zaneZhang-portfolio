@@ -19,26 +19,22 @@ const HeroSection = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-purple-700">
               Hello, I&apos;m
             </span>
-            <br></br>
-            <TypeAnimation
-              sequence={[
-                "Zane Zhang",
-                1000,
-                "Full-Stack Developer",
-                1000,
-                "UI/UX Designer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+            <br />
+            <span className="whitespace-nowrap">
+              <TypeAnimation
+                sequence={["Zane Zhang", 800, "Full-Stack Developer", 800]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </span>
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Experienced software engineer skilled in agile development,
             specializing in building responsive web applications using
             <span className=" text-orange-500 font-bold ">
-              React, TypeScript, Mobx, GraphQL, HTML/CSS, Node.js, and SQL.
+              React, C#, .NET Core, TypeScript, Redux, REST APIs, GraphQL,
+              Node.js, Material UI, Tailwind CSS, and SQL.
             </span>
             Eager to collaborate, add value, and grow.
           </p>
